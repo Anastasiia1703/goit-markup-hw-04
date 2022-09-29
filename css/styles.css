@@ -10,6 +10,8 @@
   --footer-link: rgba(255, 255, 255, 0.6);
   --border-header: 1px solid #ececec;
   --border-image: 1px solid #eeeeee;
+  --icon-color: #afb1b8;
+  --icon-footer-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -245,6 +247,7 @@ img {
   content: "";
   height: 120px;
   margin-bottom: 30px;
+  background: var(--background-section-team);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -384,11 +387,11 @@ img {
 
 .icon-team-link:hover .icon-team,
 .icon-team-link:focus .icon-team {
-  fill: white;
+  fill: var(--secondary-white-color);
 }
 
 .icon-team {
-  fill: #afb1b8;
+  fill: var(--icon-color);
 }
 
 /* Постійні клієнти */
@@ -406,7 +409,7 @@ img {
 .icon-clients-link {
   height: 92px;
   display: block;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 
@@ -416,7 +419,7 @@ img {
 }
 
 .icon-clients {
-  fill: #afb1b8;
+  fill: var(--icon-color);
 }
 
 .icon-clients-link:hover .icon-clients,
@@ -495,7 +498,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--secondary-white-color);
 }
 
 .footer-list {
@@ -517,7 +520,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--icon-footer-color);
 }
 
 .icon-footer-link:hover,
@@ -560,20 +563,15 @@ img {
   min-width: 73px;
   border-radius: 4px;
   padding: 6px 22px;
-
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .button:hover,
 .button:focus {
   color: var(--secondary-white-color);
-}
-
-.button:hover,
-.button:focus {
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* карточки */
@@ -597,7 +595,11 @@ img {
 
 .portfolio-item {
   width: calc((100% - 60px) / 3);
-  border: 1px solid #eeeeee;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  border: 1px solid var(--border-image);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
